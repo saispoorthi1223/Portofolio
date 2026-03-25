@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Spoorthi Botla | Portfolio</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #5C5857;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* NAVBAR */
+       /* GLASS NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 0;
+
+    background: rgba(92, 88, 87, 0.35); /* transparent version of your color */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+
+    z-index: 1000;
+}        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+
+    padding: 6px 12px;
+    border-radius: 8px;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+/* ACTIVE NAV LINK */
+nav a.active {
+    background: rgba(255, 255, 255, 0.35);
+    color: white;
+    border-radius: 8px;
+}
+        /* HOME SECTION */
+        #home {
+            padding: 150px 20px 80px;
+            background: #7BAE7F;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+
+        #home h1 {
+            font-size: 45px;
+        }
+
+/* GLASS BUTTON STYLE */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 16px;
+
+    background: rgba(255, 255, 255, 0.15); /* transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    
+    box-shadow:
+        0 4px 12px rgba(92, 88, 87, 0.25),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 20px rgba(92, 88, 87, 0.35),
+        inset 0 0 12px rgba(255, 255, 255, 0.4);
+}        
+       .profile-icon {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    padding: 12px;
+
+    /* NEW DESIGN EFFECTS */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 40px rgba(79, 70, 229, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.profile-icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(79, 70, 229, 0.8),
+                0 0 60px rgba(79, 70, 229, 0.6);
+}
+
+        /* CONTENT SECTIONS */
+        /* BEAUTIFUL GLASS CARD SECTIONS */
+.content-section {
+    display: none;
+    width: 90%;
+    max-width: 900px;
+    margin: 140px auto 40px auto;
+
+    padding: 35px;
+
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    /* Soft shadows */
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.12),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+    
+    animation: fadeIn 0.5s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+        h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+
+    border-left: 6px solid #5C5857;
+    padding-left: 12px;
+
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    /* subtle shadow */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content-section p {
+    line-height: 1.7;
+    font-size: 16px;
+    color: #2c2c2c;
+}
+        /* FOOTER FIXED AT BOTTOM */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            width: 100%;
+        }
+.quote-box {
+    margin-top: 20px;
+    padding: 18px 22px;
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-left: 5px solid #5C5857;
+    border-radius: 10px;
+
+    font-style: italic;
+    font-size: 17px;
+    color: #3b3b3b;
+    line-height: 1.7;
+
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.08),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+
+    animation: fadeQuote 0.7s ease;
+}
+
+@keyframes fadeQuote {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+/* EDUCATION CARD */
+.edu-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 20px 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    margin-top: 22px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12),
+        inset 0 0 10px rgba(255, 255, 255, 0.25);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.edu-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18),
+        inset 0 0 14px rgba(255, 255, 255, 0.35);
+}
+
+.edu-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.edu-card p {
+    font-size: 15.5px;
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+/* PROJECT CARDS */
+.project-card {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    padding: 20px 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    margin-top: 22px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12),
+        inset 0 0 10px rgba(255, 255, 255, 0.25);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18),
+        inset 0 0 14px rgba(255, 255, 255, 0.35);
+}
+
+/* Project title style */
+.project-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Project text */
+.project-card p {
+    font-size: 15.5px;
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+#contact a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="#" onclick="openSection('home')">Home</a></li>
+        <li><a href="#" onclick="openSection('about')">About</a></li>
+        <li><a href="#" onclick="openSection('skills')">Skills</a></li>
+        <li><a href="#" onclick="openSection('projects')">Projects</a></li>
+        <li><a href="#" onclick="openSection('education')">Education</a></li>
+        <li><a href="#" onclick="openSection('certifications')">Certifications</a></li>
+        <li><a href="#" onclick="openSection('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME PAGE -->
+<section id="home">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" 
+         alt="Profile Icon"
+         class="profile-icon">
+
+    <h1>Sai Spoorthi Botla</h1>
+    <p>Aspiring Software & AI Developer | Python • Computer Vision • Flask • Power BI</p>
+    <a href="https://drive.google.com/file/d/1lYmvNZPFncz95cKoBLXkemPtDx1NBaF9/view?usp=drivesdk" class="btn">Download Resume</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="content-section">
+    <h2>👤 About Me</h2>
+    <p>
+    I am an aspiring Software and AI Developer pursuing my B.Tech in Computer Science Engineering
+    with an academic CGPA of 8.90. My technical experience spans Python programming, 
+    Computer Vision, Flask-based web development, and workflow automation using APIs and n8n.
+    <br><br>
+    I have built impactful projects such as a Yoga Pose Detection and Recommendation System 
+    using MediaPipe and OpenCV, and automated Google Sheets + Gmail workflows using n8n. 
+    Additionally, I am skilled in data visualization tools like Power BI and Microsoft Excel.
+    <br><br>
+    Driven by curiosity and a passion for innovation, I constantly seek to improve my knowledge 
+    and develop solutions that make a difference. I am now looking for internship opportunities 
+    where I can contribute, collaborate, and grow further.
+</p>
+<div class="quote-box">
+    <p>“I believe in building meaningful solutions by combining creativity, logic, and continuous learning.”</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="content-section">
+    <h2>💡 Skills</h2>
+    <p><strong>Programming:</strong> Python, SQL</p>
+    <p><strong>Web:</strong> HTML, CSS (Basics), Flask</p>
+    <p><strong>Libraries:</strong> OpenCV, MediaPipe</p>
+    <p><strong>Data Tools:</strong> Power BI, MS Excel</p>
+    <p><strong>Soft Skills:</strong> Communication, Teamwork, Leadership, Problem Solving</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="content-section">
+    <h2>📂 Projects</h2>
+ <div class="project-card">
+        <h3> Yoga Pose Detection & Recommendation System</h3>
+	<p>
+A computer vision–based system built using <strong>OpenCV</strong> and <strong>MediaPipe</strong> to detect yoga poses in real time.  
+The model identifies user posture and provides <strong>personalized yoga recommendations</strong> to improve alignment and form.  
+Implemented angle detection, keypoint tracking, and pose classification for accurate feedback.
+<br><br>
+GitHub :https://github.com/saispoorthi1223/yoga-pose-recomendation-system
+</p>
+
+        
+    </div>
+
+    <div class="project-card">
+        <h3>Workflow Automation using n8n & APIs</h3>
+	<p>
+Developed an automated workflow using <strong>n8n</strong>, <strong>Google Sheets API</strong>, and <strong>Gmail API</strong> to streamline data handling.  
+The system collects form responses, updates Google Sheets automatically, and sends personalized automated email replies.  
+This significantly reduces manual effort and increases efficiency.
+<br><br>
+GitHub: https://github.com/saispoorthi1223/n8n-automation-workflow
+</p>
+            </div>
+
+    </section>
+
+<!-- EDUCATION -->
+<section id="education" class="content-section">
+    <h2>🎓 Education</h2>
+    <div class="edu-card">
+        <h3>B.Tech in Computer Science Engineering</h3>
+	<p>Sridevi Women's Engineering College</p>
+        <p>2022 – 2026</p>
+        <p>CGPA: 8.85</p>
+    </div>
+
+    <div class="edu-card">
+        <h3>Intermediate (MPC)</h3>
+	<p>Pavitra Junior College</p>
+        <p>2020 – 2022</p>
+        <p>Percentage: 98.6</p>
+    </div>
+
+    <div class="edu-card">
+        <h3>SSC</h3>
+	<p>Saint Peter's High School</p>
+        <p>Year: 2020</p>
+        <p>GPA / Percentage: 100</p>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="content-section">
+    <h2>🏅 Certifications & Awards</h2>
+    <p>
+        • Tata Data Visualisation (Forage)<br>
+        • Power BI – Udemy<br>
+        • Summer of AI Internship – Swecha<br>
+        • AI Tools – GFG Upskill<br><br>
+
+        <strong>Awards:</strong><br>
+        • Honourable Certificate of Merit – All India Essay Writing Event (2019)
+br>
+        • 1st Prize – Inter School Essay Competition on Road Safety (2019)
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="content-section">
+    <h2>📞 Contact</h2>
+	
+
+    <p><strong>Email:</strong> 
+        <a href="mailto:spoorthibotla@gmail.com">spoorthibotla@gmail.com</a>
+    </p>
+
+    <p><strong>Phone:</strong> 
+        <a href="tel:7816081718">7816081718</a>
+    </p>
+
+    <p><strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/spoorthi-botla-984a51322/" target="_blank">
+            Visit Profile
+        </a>
+    </p>
+
+    <p><strong>GitHub:</strong> 
+        <a href="https://github.com/saispoorthi1223" target="_blank">
+            View GitHub
+        </a>
+    </p>
+
+    <p><strong>Download Resume:</strong> 
+        <a href="https://drive.google.com/file/d/1lYmvNZPFncz95cKoBLXkemPtDx1NBaF9/view?usp=drivesdk" target="_blank">View Resume</a>
+    </p>
+
+    
+</section>
+
+<footer>
+    © 2026 — Designed by Sai Spoorthi Botla
+</footer>
+
+<script>
+    function openSection(sectionId) {
+
+        // Hide all content sections
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(sec => sec.style.display = 'none');
+
+        // Show only home if home clicked
+        document.getElementById("home").style.display = 
+            (sectionId === "home") ? "block" : "none";
+
+        // Show the selected section
+        if (sectionId !== "home") {
+            document.getElementById(sectionId).style.display = "block";
+            window.scrollTo(0, 100);
+        }
+
+        // ⭐ ADD ACTIVE NAV LINK HIGHLIGHT ⭐
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(link => link.classList.remove("active"));
+
+        // Find the link that was clicked and add active class
+        const clickedLink = Array.from(navLinks)
+            .find(link => link.getAttribute("onclick").includes(sectionId));
+
+        if (clickedLink) {
+            clickedLink.classList.add("active");
+        }
+    }
+
+    // Default open HOME
+    openSection('home');
+</script>
+</body>
+</html>
